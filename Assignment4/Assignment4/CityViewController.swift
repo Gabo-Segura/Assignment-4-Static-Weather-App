@@ -6,6 +6,7 @@
 //  Copyright © 2018 Derrick Park. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class CityViewController: UIViewController {
@@ -32,7 +33,9 @@ class CityViewController: UIViewController {
 	}
   
   @objc func showWeatherDetails() {
-    
+    let detailsViewController = DetailsViewController()
+    detailsViewController.city = city
+    navigationController?.pushViewController(detailsViewController, animated: true)
   }
 }
 
